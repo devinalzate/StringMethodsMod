@@ -19,5 +19,10 @@ func (p *Product) ChangeOverview(overview_update string) {
 }
 
 func (p *Product) RecalculatePriceWithIva() {
-	p.Price = p.Price * 0.20
+	p.Price = p.Price + (p.Price * 0.20)
+}
+
+func (p *Product) getName() string {
+	text := "Producto" + p.Name
+	return text
 }
