@@ -22,7 +22,7 @@ func (p *Product) RecalculatePriceWithIva() {
 	p.Price = p.Price + (p.Price * 0.20)
 }
 
-func (p *Product) getName() string {
-	text := "Producto" + p.Name
+func (p *Product) getName() (text string) {
+	text = "Producto: " + p.Name
 	return text
 }
